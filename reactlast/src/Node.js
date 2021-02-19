@@ -1,19 +1,18 @@
-
 //export nombrado obliga a imporatrlo con en nombre y {}
 export const Note = (props) => {
-    console.log({props});
+  console.log({ props });
 
-    const {content, date} = props;
+  const { title, body } = props;
 
-    return(
-        <li>
-          <p>{content}</p>
-          <small>
-            <time>{date}</time>
-          </small>
-        </li>
-    );
-  }
+  return (
+    <li>
+      <h3>{title}</h3>
+      <small>
+        <p>{body}</p>
+      </small>
+    </li>
+  );
+};
 
-  //export por defecto
- // export default Note;
+//export por defecto
+// export default Note;
