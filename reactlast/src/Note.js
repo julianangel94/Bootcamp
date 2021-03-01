@@ -2,13 +2,13 @@
 export const Note = (props) => {
   console.log({ props });
 
-  const { title, body } = props;
+  const { content } = props;
 
   return (
     <li>
-      <h3>{title}</h3>
+      <h3>{content}</h3>
       <small>
-        <p>{body}</p>
+        <p>{content}</p>
       </small>
     </li>
   );

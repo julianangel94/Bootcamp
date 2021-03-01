@@ -1,5 +1,5 @@
 import "./App.css";
-import { Note } from "./Node.js";
+import { Note } from "./Note.js";
 import { useEffect, useState } from "react";
 import { getAllNotes } from "./services/notes/getAllNotes";
 import { createNote } from "./services/notes/createNote";
@@ -43,9 +43,7 @@ export default function App() {
     event.preventDefault();
 
     const noteToAddToState = {
-      title: newNote,
-      body: newNote,
-      userId: 1,
+      content: 'This is a new note'
     };
 
     setError("");
@@ -63,8 +61,10 @@ export default function App() {
     setNewNote("");
   };
 
+  console.log({notes})
+
   return (
-    <di>
+    <div>
       <h1>Notes</h1>
       {loading ? "Cargando..." : ""}
       <ol>
@@ -78,7 +78,7 @@ export default function App() {
         <button>Crear nota</button>
       </form>
       <p>{error ? error : ""}</p>
-    </di>
+    </div>
   );
 }
 
